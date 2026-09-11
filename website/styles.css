@@ -94,6 +94,7 @@ h3 { font-size: 25px; letter-spacing: -.025em; }
 .feature-copy { position: relative; z-index: 2; padding: 48px; width: 52%; }
 .feature-copy .eyebrow { color: #c2bcb0; font-size: 11px; }
 .feature-copy h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 4.1vw, 62px); line-height: 1; letter-spacing: -.04em; margin: 26px 0 19px; }
+.feature-highlight { color: #e7a088; }
 .feature-copy > p { max-width: 280px; font-size: 15px; line-height: 1.55; color: #cbc6bc; }
 .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; padding: 12px 18px; border-radius: 5px; min-height: 47px; font-size: 14px; transition: transform .2s, opacity .2s; }
 .button:hover { transform: translateY(-2px); opacity: .88; }
