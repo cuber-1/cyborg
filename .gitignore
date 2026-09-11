@@ -1,0 +1,11 @@
+# Publish the website project from this mixed research workspace.
+/*
+!/.gitignore
+!/README.md
+!/website/
+
+.DS_Store
+node_modules/
+.env
+.env.*
+*.log
