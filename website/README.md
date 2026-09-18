@@ -10,7 +10,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 
 ## Pages and shared code
 
-- `index.html`: project introduction, a scroll-driven brain/arm concept illustration, and links into the site.
+- `index.html`: project introduction, an expanding research panel, a scroll-driven brain/arm concept illustration, and links into the site.
 - `research.html`: research question, planned measures, and candidate study design.
 - `team.html`: the 10-person roster and faculty mentor.
 - `reading.html`: selected literature with search, topic filters, and annotations.
@@ -18,9 +18,10 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 - `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
 - `site.js`: mobile navigation, clipboard feedback, page reveals, and compatibility for old homepage anchors.
 - `reading.js`: reading-page search, filtering, and rendering.
+- `feature-scroll.js`: expands the black research panel to the viewport edges on scroll; text keeps its reading width.
 - `brain-arm.js` / `brain-arm.css`: homepage-only SVG scroll animation; native scrolling controls signal paths, elbow movement, and feedback.
 - `research-data.js`: paper metadata, short annotations, and team roster records. The displayed roster is static HTML in `team.html`.
-- `assets/`: team portraits, the University of Maryland footer logo, the original concept image, and the CYBORG mark. See `assets/image-provenance.md` for the concept artwork's generation details.
+- `assets/`: team portraits, University of Maryland and Gemstone logos, and the CYBORG mark. See `assets/image-provenance.md` for image sources.
 
 Edit page content directly in its HTML file. The navigation and footer are repeated in the five files so every page has functional links without JavaScript. Apply changes to those shared elements consistently across the pages.
 
@@ -28,11 +29,11 @@ Edit page content directly in its HTML file. The navigation and footer are repea
 
 The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits identify the people on the roster, and the footer includes the University of Maryland logo.
 
-Motion includes brief hover transitions, small reveals, and a homepage illustration driven by scroll position. The brain/arm section uses native scrolling and schedules frames only when the page scrolls or resizes. Reduced-motion preferences show a complete static illustration without the extended sticky section and disable other motion. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
+Motion includes brief hover transitions, small reveals, an expanding black research panel, and a homepage illustration driven by scroll position. The brain/arm section uses native scrolling and schedules frames only when the page scrolls or resizes. Reduced-motion preferences show a complete static illustration without the extended sticky section and disable other motion. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
 
 ## Research framing
 
-The study is in development. The site does not claim completed experiments, a validated adaptive controller, or clinical effectiveness. The research page keeps the EEG-validation and retained-learning distinctions clear. The existing hand artwork is a concept illustration, not a confirmed study device.
+The study is in development. The site does not claim completed experiments, a validated adaptive controller, or clinical effectiveness. The research page keeps the EEG-validation and retained-learning distinctions clear. The animated brain–arm diagram is a concept illustration, not a confirmed study device.
 
 ## Validation
 
