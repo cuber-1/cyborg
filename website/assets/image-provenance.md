@@ -4,7 +4,7 @@
 
 - Asset: `mark.svg`.
 - User-supplied `cyborg-minimal-hexagon-v1.svg`, with the original geometry and colors preserved.
-- Used in every page's header and footer and as the browser icon.
+- Embedded directly as SVG in every page's header and footer, with the same artwork used as the browser icon.
 
 ## Team portraits
 
