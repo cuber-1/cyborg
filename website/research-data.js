@@ -98,14 +98,13 @@ window.CYBORG_DATA = {
     }
   ],
   team: [
-    { name: 'Christian Salamanca', initials: 'CS' },
+    { name: 'Aryan Sharma', initials: 'AS' },
     { name: 'Daniel Nikitin', initials: 'DN' },
     { name: 'Dvij Raicha', initials: 'DR' },
     { name: 'Eli Kurtz', initials: 'EK' },
     { name: 'Grant Middleton', initials: 'GM' },
     { name: 'Healy Levy-Yurista', initials: 'HLY' },
     { name: 'Jakeem Morris', initials: 'JM' },
-    { name: 'Jasper Thorne-Lyman', initials: 'JTL' },
     { name: 'Joanna Wei', initials: 'JW' },
     { name: 'Sneha Jose', initials: 'SJ' },
     { name: 'Vishal Shankar', initials: 'VS' }

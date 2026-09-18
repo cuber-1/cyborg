@@ -12,14 +12,14 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 
 - `index.html`: project introduction, a scroll-driven brain/arm concept illustration, and links into the site.
 - `research.html`: research question, planned measures, and candidate study design.
-- `team.html`: the 11-person roster and faculty mentor.
+- `team.html`: the 10-person roster and faculty mentor.
 - `reading.html`: selected literature with search, topic filters, and annotations.
 - `contact.html`: official email and copy-email control.
 - `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
 - `site.js`: mobile navigation, clipboard feedback, page reveals, and compatibility for old homepage anchors.
 - `reading.js`: reading-page search, filtering, and rendering.
 - `brain-arm.js` / `brain-arm.css`: homepage-only SVG scroll animation; native scrolling controls signal paths, elbow movement, and feedback.
-- `research-data.js`: paper metadata, short annotations, and original roster records. The displayed roster is static HTML in `team.html`.
+- `research-data.js`: paper metadata, short annotations, and team roster records. The displayed roster is static HTML in `team.html`.
 - `assets/`: team portraits, the University of Maryland footer logo, the original concept image, and the CYBORG mark. See `assets/image-provenance.md` for the concept artwork's generation details.
 
 Edit page content directly in its HTML file. The navigation and footer are repeated in the five files so every page has functional links without JavaScript. Apply changes to those shared elements consistently across the pages.
