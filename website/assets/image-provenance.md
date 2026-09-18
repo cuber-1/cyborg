@@ -18,3 +18,15 @@ Style and materials: Premium product photography with a sculptural editorial qua
 Lighting/mood: Dramatic soft studio illumination, soft neutral ivory highlights and deep charcoal shadows, with a subtle warm coral-red rim light. Quiet, precise, humane, elegant.
 Palette: Near black, warm white, natural subdued skin, graphite and a very restrained warm coral-red accent.
 Constraints: One hand with exactly five anatomically correct fingers. Entire hand visible. Square or slightly portrait composition. Do not render text, logos, watermarks, labels, or interface elements. No weapon, armor gauntlet, whole robot body, glowing neon, holograms, exposed wounds, or science-fiction battlefield.
+
+
+## Team portraits
+
+User-supplied portraits added September 18, 2026, in the requested order: Jakeem Morris, Vishal Shankar, Dvij Raicha. Web copies are in `team/` as named JPEGs, limited to a 1000-pixel longest edge and encoded at 85% quality. Original attachments remain unchanged; CSS controls the displayed framing.
+
+## University of Maryland seal
+
+- Asset: `umd-informal-seal.png`.
+- Official source and usage guidance: https://brand.umd.edu/logos
+- Download: https://umd-brand.transforms.svdcdn.com/production/uploads/images/informal-seal.png?auto=compress%2Cformat&dm=1656362660&fit=crop&h=512&s=f147c43be06ac2a530c41260819e63a1&w=512
+- Full-color informal seal, used intact at 80 × 80 CSS pixels in the footer, above the stated 73-pixel minimum.

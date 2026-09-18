@@ -1,8 +1,6 @@
 (() => {
   'use strict';
 
-  const theme = window.CyborgTheme;
-
   function routeLegacyAnchor() {
     if (!/(?:\/index\.html|\/)$/i.test(window.location.pathname)) return false;
     const routes = {
@@ -16,9 +14,6 @@
     if (!route) return false;
     const destination = new URL(route, window.location.href);
     destination.search = window.location.search;
-    if (window.location.protocol === 'file:' && theme) {
-      destination.searchParams.set('theme', theme.preference);
-    }
     window.location.replace(destination.href);
     return true;
   }
@@ -26,18 +21,8 @@
   if (routeLegacyAnchor()) return;
   window.addEventListener('hashchange', routeLegacyAnchor);
 
-  const themeToggle = document.querySelector('[data-theme-toggle]');
-  const themeMenu = document.getElementById('theme-menu');
-  const themeOptions = [...document.querySelectorAll('[data-theme-option]')];
   const menuToggle = document.querySelector('[data-menu-toggle]');
   const mobileNav = document.getElementById('mobile-nav');
-
-  function closeTheme(restoreFocus = false) {
-    if (!themeMenu || !themeToggle) return;
-    themeMenu.hidden = true;
-    themeToggle.setAttribute('aria-expanded', 'false');
-    if (restoreFocus) themeToggle.focus();
-  }
 
   function closeNavigation(restoreFocus = false) {
     if (!mobileNav || !menuToggle) return;
@@ -47,73 +32,11 @@
     if (restoreFocus) menuToggle.focus();
   }
 
-  function syncThemeControls() {
-    if (!theme) return;
-    const preference = theme.preference;
-    if (themeToggle) themeToggle.setAttribute('aria-label', `Appearance: ${preference[0].toUpperCase() + preference.slice(1)}`);
-    document.querySelectorAll('.theme-label').forEach(label => {
-      label.textContent = preference[0].toUpperCase() + preference.slice(1);
-    });
-    themeOptions.forEach(option => {
-      option.setAttribute('aria-checked', String(option.dataset.themeOption === preference));
-      option.tabIndex = -1;
-    });
-  }
-
-  function openTheme(last = false) {
-    closeNavigation();
-    themeMenu.hidden = false;
-    themeToggle.setAttribute('aria-expanded', 'true');
-    const selected = themeOptions.find(option => option.dataset.themeOption === theme.preference);
-    const target = last ? themeOptions[themeOptions.length - 1] : selected || themeOptions[0];
-    if (target) target.focus();
-  }
-
-  if (theme && themeToggle && themeMenu) {
-    themeToggle.setAttribute('aria-controls', 'theme-menu');
-    themeToggle.setAttribute('aria-haspopup', 'menu');
-    themeMenu.setAttribute('role', 'menu');
-    themeOptions.forEach(option => {
-      option.setAttribute('role', 'menuitemradio');
-      option.addEventListener('click', () => {
-        theme.set(option.dataset.themeOption);
-        closeTheme(true);
-      });
-    });
-    closeTheme();
-    syncThemeControls();
-    document.addEventListener('cyborg:themechange', syncThemeControls);
-    themeToggle.addEventListener('click', () => {
-      if (themeMenu.hidden) openTheme();
-      else closeTheme();
-    });
-    themeToggle.addEventListener('keydown', event => {
-      if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
-      event.preventDefault();
-      openTheme(event.key === 'ArrowUp');
-    });
-    themeMenu.addEventListener('keydown', event => {
-      const index = themeOptions.indexOf(document.activeElement);
-      let next;
-      if (event.key === 'ArrowDown') next = (index + 1) % themeOptions.length;
-      else if (event.key === 'ArrowUp') next = (index - 1 + themeOptions.length) % themeOptions.length;
-      else if (event.key === 'Home') next = 0;
-      else if (event.key === 'End') next = themeOptions.length - 1;
-      else if (/^[lds]$/i.test(event.key)) {
-        next = themeOptions.findIndex(option => option.dataset.themeOption.startsWith(event.key.toLowerCase()));
-      }
-      if (next === undefined || next < 0 || !themeOptions[next]) return;
-      event.preventDefault();
-      themeOptions[next].focus();
-    });
-  }
-
   if (menuToggle && mobileNav) {
     menuToggle.setAttribute('aria-controls', 'mobile-nav');
     closeNavigation();
     menuToggle.addEventListener('click', () => {
       const open = mobileNav.hidden;
-      closeTheme();
       mobileNav.hidden = !open;
       menuToggle.setAttribute('aria-expanded', String(open));
       menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
@@ -128,18 +51,11 @@
   }
 
   document.addEventListener('click', event => {
-    if (themeMenu && themeToggle && !themeMenu.contains(event.target) && !themeToggle.contains(event.target)) closeTheme();
     if (mobileNav && menuToggle && !mobileNav.contains(event.target) && !menuToggle.contains(event.target)) closeNavigation();
-  });
-  document.addEventListener('focusin', event => {
-    if (themeMenu && themeToggle && !themeMenu.contains(event.target) && !themeToggle.contains(event.target)) closeTheme();
   });
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
-    if (themeMenu && !themeMenu.hidden) {
-      event.preventDefault();
-      closeTheme(true);
-    } else if (mobileNav && !mobileNav.hidden) {
+    if (mobileNav && !mobileNav.hidden) {
       event.preventDefault();
       closeNavigation(true);
     }
