@@ -137,15 +137,14 @@ td { font-family: var(--serif); font-size: 25px; color: var(--accent); }
 .next-page > a { display: flex; align-items: center; gap: 35px; font-size: 26px; letter-spacing: -.025em; }
 .next-page a:hover { color: var(--accent); }
 .roster-section { padding-bottom: 55px; }
-.team-grid { display: grid; grid-template-columns: repeat(3,1fr); padding: 0; margin: 0; list-style: none; column-gap: 35px; }
-.team-member { border-top: 1px solid var(--line); padding: 24px 0; display: flex; align-items: center; gap: 20px; min-width: 0; }
-.member-photo, .member-initials { width: 104px; height: 130px; flex: 0 0 104px; border-radius: 5px; }
+.team-grid { display: grid; grid-template-columns: repeat(5,1fr); padding: 0; margin: 0; list-style: none; gap: 20px 24px; }
+.team-member { min-width: 0; }
+.member-photo, .member-placeholder { width: 100%; height: auto; aspect-ratio: 4 / 5; border-radius: 5px; }
 .member-photo { object-fit: cover; object-position: center 25%; }
 .member-photo-vishal-shankar { object-position: center 15%; }
-.member-initials { display: grid; place-items: center; background: var(--surface); color: var(--muted); font: 32px/1 var(--serif); }
-.member-info { min-width: 0; }
-.member-number { display: block; font-size: 11px; color: var(--muted); margin-bottom: 12px; }
-.team-member h2 { font-size: 22px; letter-spacing: -.03em; line-height: 1.25; }
+.member-placeholder { display: grid; place-items: center; background: var(--surface); color: var(--line); }
+.member-placeholder svg { width: 48px; height: 48px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.member-number { display: block; font-size: 11px; color: var(--muted); margin-top: 10px; }
 .mentor-section { padding-bottom: 65px; }
 .mentor-card { background: var(--sage); border-radius: 10px; padding: 34px 40px 40px; }
 .mentor-card > .eyebrow { color: var(--muted); margin-bottom: 30px; }
@@ -235,7 +234,7 @@ td { font-family: var(--serif); font-size: 25px; color: var(--accent); }
   .filter-button { font-size: 12px; padding-inline: 10px; }
   .paper-title { max-width: 800px; font-size: 23px; }
   .paper-type { display: none; }
-  .team-grid { grid-template-columns: repeat(2,1fr); }
+  .team-grid { grid-template-columns: repeat(4,1fr); }
   .contact-grid { gap: 40px; }
   .contact-email { font-size: 25px; }
 }
@@ -273,8 +272,7 @@ td { font-family: var(--serif); font-size: 25px; color: var(--accent); }
   .measure-card p { font-size: 14px; }
   .measure-card .text-link { font-size: 12px; }
   .measure-icon { margin-bottom: 30px; }
-  .team-grid { column-gap: 24px; grid-template-columns: repeat(2,1fr); }
-  .team-member h2 { font-size: 22px; }
+  .team-grid { column-gap: 20px; grid-template-columns: repeat(3,1fr); }
   .mentor-content { grid-template-columns: 128px minmax(0,1fr); gap: 20px 25px; }
   .mentor-photo { width: 128px; height: 160px; grid-row: span 2; }
   .mentor-content > div { grid-column: 2; }
@@ -347,10 +345,8 @@ td { font-family: var(--serif); font-size: 25px; color: var(--accent); }
   .next-page { padding-block: 28px 42px; display: block; }
   .next-page > span { font-size: 13px; }
   .next-page > a { justify-content: space-between; font-size: 26px; margin-top: 12px; }
-  .team-grid { grid-template-columns: 1fr; }
-  .team-member { padding-block: 20px 28px; }
-  .member-number { margin-bottom: 12px; font-size: 10px; }
-  .team-member h2 { font-size: 24px; line-height: 1.3; }
+  .team-grid { grid-template-columns: repeat(2,1fr); gap: 20px 16px; }
+  .member-number { font-size: 10px; }
   .roster-section { padding-bottom: 28px; }
   .mentor-section { padding-bottom: 35px; }
   .mentor-card { padding: 27px; }
@@ -390,7 +386,6 @@ td { font-family: var(--serif); font-size: 25px; color: var(--accent); }
   .header-actions { gap: 12px; }
   .link-card { padding: 21px; gap: 20px; }
   .link-card h3 { font-size: 21px; }
-  .team-member h2 { font-size: 18px; }
   .contact-email { font-size: 23px; }
 }
 @media (prefers-reduced-motion: reduce) {

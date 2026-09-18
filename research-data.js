@@ -96,17 +96,5 @@ window.CYBORG_DATA = {
       takeaway: 'Build on this assistance-mode comparison while testing graded assistance and practice effects separately.',
       type: 'Experiment'
     }
-  ],
-  team: [
-    { name: 'Aryan Sharma', initials: 'AS' },
-    { name: 'Daniel Nikitin', initials: 'DN' },
-    { name: 'Dvij Raicha', initials: 'DR' },
-    { name: 'Eli Kurtz', initials: 'EK' },
-    { name: 'Grant Middleton', initials: 'GM' },
-    { name: 'Healy Levy-Yurista', initials: 'HLY' },
-    { name: 'Jakeem Morris', initials: 'JM' },
-    { name: 'Joanna Wei', initials: 'JW' },
-    { name: 'Sneha Jose', initials: 'SJ' },
-    { name: 'Vishal Shankar', initials: 'VS' }
   ]
 };
