@@ -14,22 +14,25 @@
   function render() {
     let inset = 0;
     let radius = 0;
+    let contentScale = 1;
     if (!motionPreference.matches && !printing) {
       const bounds = section.getBoundingClientRect();
-      const innerBounds = inner.getBoundingClientRect();
       const headerHeight = header ? header.getBoundingClientRect().height : 0;
-      const start = window.innerHeight * 0.85;
+      const start = Math.min(window.innerHeight * 0.78, bounds.top + window.scrollY);
       const end = headerHeight + 24;
       const distance = start - end;
       const progress = distance > 0
         ? clamp((start - bounds.top) / distance)
         : bounds.top <= end ? 1 : 0;
       const eased = progress * progress * (3 - 2 * progress);
-      inset = Math.max(0, innerBounds.left - bounds.left) * (1 - eased);
-      radius = 12 * (1 - eased);
+      const compact = bounds.width <= 800;
+      inset = bounds.width * (compact ? 0.1 : 0.14) * (1 - eased);
+      contentScale = 1 - (compact ? 0.1 : 0.2) * (1 - eased);
+      radius = 20 * (1 - eased);
     }
     section.style.setProperty('--feature-inset', `${inset}px`);
     section.style.setProperty('--feature-radius', `${radius}px`);
+    section.style.setProperty('--feature-content-scale', String(contentScale));
   }
 
   function schedule() {

@@ -19,7 +19,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 - `site.js`: mobile navigation, clipboard feedback, page reveals, and compatibility for old homepage anchors.
 - `home-intro.js`: types the homepage headline while the surrounding content fades in, preserving the heading's layout and accessible text.
 - `reading.js`: reading-page search, filtering, and rendering.
-- `feature-scroll.js`: expands the black research panel to the viewport edges on scroll; text keeps its reading width.
+- `feature-scroll.js`: expands the black research panel from 72% viewport width (80% on mobile) to the screen edges; the contents scale gently without reflowing.
 - `brain-arm.js` / `brain-arm.css`: homepage-only SVG scroll animation; native scrolling controls signal paths, elbow movement, and feedback.
 - `research-data.js`: paper metadata, short annotations, and team roster records. The displayed roster is static HTML in `team.html`.
 - `assets/`: team portraits, University of Maryland and Gemstone logos, and the CYBORG mark. See `assets/image-provenance.md` for image sources.
