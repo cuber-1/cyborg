@@ -9,8 +9,10 @@
   <meta property="og:description" content="Team CYBORG, University of Maryland Gemstone Honors Program, Class of 2029. Research on mental workload and robotic assistance.">
   <title>Researching the human side of robotic assistance · CYBORG</title>
   <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
-  <link rel="stylesheet" href="styles.css?v=899bccf36c">
+  <link rel="stylesheet" href="styles.css?v=bc8261fc48">
   <script src="site.js?v=627236add2" defer></script>
+  <link rel="stylesheet" href="brain-arm.css?v=0a30a4569c">
+  <script src="brain-arm.js?v=d7cc9b3561" defer></script>
   
 </head>
 <body data-page="index">
@@ -45,6 +47,77 @@
         <span class="image-caption">Concept illustration</span>
       </div>
     </section>
+    <section id="connection" class="sync-section wrap" data-brain-arm aria-labelledby="sync-title">
+      <div class="sync-sticky">
+        <div class="sync-heading">
+          <div><p class="eyebrow">The human–machine connection</p><h2 id="sync-title">Movement is<br>a conversation.</h2></div>
+          <p class="sync-intro">Between the brain, the body,<br>and the support we build.</p>
+        </div>
+        <figure class="sync-visual" aria-label="Concept animation of a brain sending a signal, an assisted arm moving, and sensory feedback returning.">
+          <svg class="sync-scene" viewBox="0 0 1000 490" role="img" aria-labelledby="sync-diagram-title sync-diagram-desc">
+            <title id="sync-diagram-title">From intention to movement, and back</title>
+            <desc id="sync-diagram-desc">An illustrated brain connects to an arm wearing a mechanical support. Scrolling sends a signal toward the arm, bends the elbow, and returns a feedback signal. This is a conceptual illustration.</desc>
+            <defs>
+              <pattern id="sync-grid" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="currentColor" opacity=".13"/></pattern>
+              <radialGradient id="brain-wash"><stop stop-color="#d69980" stop-opacity=".24"/><stop offset="1" stop-color="#d69980" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect x="30" y="32" width="940" height="420" fill="url(#sync-grid)"/>
+            <circle class="brain-halo" cx="223" cy="224" r="174" fill="url(#brain-wash)"/>
+            <circle class="sync-orbit" cx="223" cy="224" r="151"/>
+            <path class="signal-track" d="M324 198 C443 153 518 208 576 273 S707 318 790 340"/>
+            <path class="signal-track signal-track-return" d="M790 366 C686 456 488 451 380 368 S286 319 258 293"/>
+            <path class="signal-path" data-signal-path pathLength="1" d="M324 198 C443 153 518 208 576 273 S707 318 790 340"/>
+            <path class="feedback-path" data-feedback-path pathLength="1" d="M790 366 C686 456 488 451 380 368 S286 319 258 293"/>
+            <g class="brain-drawing">
+              <path class="brain-stem" d="M223 294 C229 320 228 330 241 350 L262 345 C246 325 253 316 257 294"/>
+              <path class="brain-outline" d="M252 119 C230 99 197 99 190 121 C165 114 136 130 139 154 C111 156 93 179 98 199 C83 223 100 248 123 252 C116 277 136 302 165 299 C179 325 208 327 227 309 C252 322 279 309 281 288 C304 292 329 271 324 248 C348 230 350 204 333 188 C348 164 331 143 308 147 C304 119 280 105 252 119 Z"/>
+              <g class="brain-folds">
+                <path d="M252 119 C231 137 248 151 232 165 C217 178 226 191 231 204 C242 227 221 240 231 259 C240 278 220 290 227 309"/>
+                <path d="M190 121 C184 139 199 149 191 165 C183 181 164 172 158 188 C151 207 169 218 185 217"/>
+                <path d="M139 154 C151 151 164 159 163 171 M98 199 C116 190 130 198 129 217 C146 215 154 227 151 244"/>
+                <path d="M123 252 C140 255 152 246 168 252 C180 260 178 280 165 299 M170 252 C179 234 199 237 207 247"/>
+                <path d="M191 165 C207 158 217 169 215 181 M185 217 C198 213 205 200 199 191 M179 280 C196 270 208 280 206 295"/>
+                <path d="M308 147 C287 142 279 157 286 174 C262 175 254 188 263 202 M333 188 C318 178 301 189 305 207"/>
+                <path d="M324 248 C314 234 297 239 288 226 C277 212 287 195 301 192 M281 288 C282 267 265 271 262 254 C260 238 272 229 288 226"/>
+              </g>
+              <g class="brain-network">
+                <path d="M158 188 L199 191 L207 247 L263 202 L286 174 M207 247 L179 280 M199 191 L191 165"/>
+                <circle data-brain-node cx="158" cy="188" r="5"/><circle data-brain-node cx="191" cy="165" r="5"/><circle data-brain-node cx="199" cy="191" r="7"/><circle data-brain-node cx="207" cy="247" r="6"/><circle data-brain-node cx="263" cy="202" r="7"/><circle data-brain-node cx="286" cy="174" r="5"/><circle data-brain-node cx="179" cy="280" r="5"/>
+              </g>
+            </g>
+            <g class="arm-drawing">
+              <path class="arm-skin" d="M808 128 C815 99 864 104 869 138 L827 319 C824 341 820 362 793 369 C768 372 754 354 761 330 Z"/>
+              <path class="arm-muscle" d="M828 155 C815 200 801 262 789 299"/>
+              <path class="arm-brace" d="M823 157 L852 166 L818 302 L787 294 Z"/>
+              <path class="brace-detail" d="M823 176 L844 182 M814 213 L835 219 M805 250 L826 256 M796 282 L817 288"/>
+              <path class="arm-cuff" d="M805 140 L863 155 L856 181 L798 166 Z M772 291 L829 306 L822 331 L765 316 Z"/>
+              <g data-forearm transform="translate(790 340) rotate(40)">
+                <path class="arm-skin" d="M2 -33 C-56 -38 -120 -31 -181 -23 L-201 -25 L-228 -58 Q-234 -66 -242 -60 Q-249 -55 -245 -48 L-228 -20 L-282 -35 Q-294 -38 -297 -28 Q-299 -20 -285 -16 L-251 -7 L-301 -7 Q-315 -9 -315 2 Q-315 11 -301 12 L-254 14 L-292 25 Q-305 28 -301 38 Q-298 46 -286 43 L-248 31 L-270 48 Q-279 55 -272 63 Q-266 70 -255 63 L-225 47 Q-205 44 -180 26 L-20 35 C10 35 24 15 23 -4 Q25 -28 2 -33 Z"/>
+                <path class="arm-muscle" d="M-187 -4 C-130 -7 -89 -11 -48 -6 M-221 -8 C-209 1 -207 15 -212 25"/>
+                <path class="arm-brace" d="M-168 -28 L-32 -38 L-28 -11 L-164 -2 Z"/>
+                <path class="brace-detail" d="M-143 -25 L-141 -5 M-105 -28 L-103 -8 M-67 -31 L-65 -11"/>
+                <path class="arm-cuff" d="M-185 -31 L-165 -32 L-159 30 L-179 32 Z M-54 -39 L-33 -40 L-27 35 L-48 35 Z"/>
+                <circle class="wrist-joint" cx="-172" cy="0" r="10"/><circle class="joint-core" cx="-172" cy="0" r="3"/>
+              </g>
+              <circle class="shoulder-joint" cx="840" cy="130" r="33"/>
+              <circle class="joint-ring" cx="840" cy="130" r="21"/>
+              <circle class="elbow-joint" cx="790" cy="340" r="39"/>
+              <circle class="joint-ring" cx="790" cy="340" r="26"/>
+              <circle class="joint-core" cx="790" cy="340" r="9"/>
+              <path class="joint-ticks" d="M790 310v7 M813 340h7 M790 363v7 M760 340h7"/>
+            </g>
+            <g class="signal-dot" data-signal-dot transform="translate(324 198)"><circle class="dot-aura" r="15"/><circle r="5"/></g>
+            <g class="feedback-dot" data-feedback-dot transform="translate(258 293)"><circle class="dot-aura" r="15"/><circle r="5"/></g>
+            <g class="scene-labels"><text x="175" y="391">BRAIN</text><text x="856" y="79">ASSISTED ARM</text></g>
+          </svg>
+        </figure>
+        <div class="sync-bottom">
+          <ol class="sync-stages" aria-label="Brain and movement loop"><li data-sync-stage="0"><span>01</span> Intention</li><li data-sync-stage="1"><span>02</span> Movement</li><li data-sync-stage="2"><span>03</span> Feedback</li></ol>
+          <div class="sync-footnote"><span class="sync-scroll-cue">Scroll to connect <span aria-hidden="true">↓</span></span><span>Concept illustration</span></div>
+        </div>
+        <div class="sync-progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
     <section class="explore-section wrap reveal" aria-labelledby="explore-title">
       <div class="section-heading"><h2 id="explore-title">Explore CYBORG</h2></div>
       <div class="link-grid">
@@ -57,7 +130,7 @@
   <footer class="site-footer wrap">
     <div class="footer-top">
       <a class="brand" href="index.html" aria-label="CYBORG home"><svg viewBox="0 0 40 40" aria-hidden="true"><path fill="currentColor" d="m20 1 17 10v18L20 39 3 29V11zm0 7L9 14v12l11 6 11-6v-6H20v6l-5-3v-6l5-3 11 6v-6z"/></svg><span>CYBORG</span></a>
-      <div class="footer-affiliation"><a class="umd-seal" href="https://umd.edu/" target="_blank" rel="noopener noreferrer" aria-label="University of Maryland"><img src="assets/umd-informal-seal.png" alt="University of Maryland seal" width="80" height="80" loading="lazy" decoding="async"></a><div class="affiliation-copy"><a href="https://gemstone.umd.edu/" target="_blank" rel="noopener noreferrer">Gemstone Honors Program ↗</a><span>University of Maryland · Class of 2029</span></div></div>
+      <div class="footer-affiliation"><a class="umd-seal" href="https://umd.edu/" target="_blank" rel="noopener noreferrer" aria-label="University of Maryland"><img src="assets/umd-informal-seal.png" alt="University of Maryland seal" width="80" height="80" loading="lazy" decoding="async"></a><div class="affiliation-copy"><a class="gemstone-logo" href="https://gemstone.umd.edu/" target="_blank" rel="noopener noreferrer" aria-label="Gemstone Honors Program"><img src="assets/gemstone-logo.png" alt="Gemstone Honors Program" width="880" height="199" loading="lazy" decoding="async"></a><span>University of Maryland · Class of 2029</span></div></div>
       <a class="footer-email" href="mailto:draicha@umd.edu">draicha@umd.edu ↗</a>
     </div>
     <div class="footer-bottom"><span>© <span data-year>2026</span> Team CYBORG</span><a href="contact.html">Contact</a></div>

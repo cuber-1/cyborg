@@ -10,7 +10,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 
 ## Pages and shared code
 
-- `index.html`: concise project introduction and links into the site.
+- `index.html`: project introduction, a scroll-driven brain/arm concept illustration, and links into the site.
 - `research.html`: research question, planned measures, and candidate study design.
 - `team.html`: the 11-person roster and faculty mentor.
 - `reading.html`: selected literature with search, topic filters, and annotations.
@@ -18,6 +18,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 - `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
 - `site.js`: mobile navigation, clipboard feedback, page reveals, and compatibility for old homepage anchors.
 - `reading.js`: reading-page search, filtering, and rendering.
+- `brain-arm.js` / `brain-arm.css`: homepage-only SVG scroll animation; native scrolling controls signal paths, elbow movement, and feedback.
 - `research-data.js`: paper metadata, short annotations, and original roster records. The displayed roster is static HTML in `team.html`.
 - `assets/`: team portraits, the University of Maryland footer logo, the original concept image, and the CYBORG mark. See `assets/image-provenance.md` for the concept artwork's generation details.
 
@@ -27,7 +28,7 @@ Edit page content directly in its HTML file. The navigation and footer are repea
 
 The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits identify the people on the roster, and the footer includes the University of Maryland logo.
 
-Motion is limited to brief hover transitions and small reveals on entering the viewport. Reduced-motion preferences disable these effects. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
+Motion includes brief hover transitions, small reveals, and a homepage illustration driven by scroll position. The brain/arm section uses native scrolling and schedules frames only when the page scrolls or resizes. Reduced-motion preferences show a complete static illustration without the extended sticky section and disable other motion. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
 
 ## Research framing
 
