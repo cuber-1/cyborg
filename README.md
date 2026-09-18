@@ -6,7 +6,7 @@ A five-page static website for Team CYBORG, University of Maryland Gemstone Hono
 
 Run `npm start` from this directory, then open http://127.0.0.1:4173. No installation or build step is required. Use `PORT=4187 npm start` if the default port is occupied.
 
-The HTML pages can also be opened directly. Local-file links carry the chosen theme between pages; a local HTTP server provides the most consistent browser behavior.
+The HTML pages can also be opened directly. A local HTTP server provides the most consistent browser behavior.
 
 ## Pages and shared code
 
@@ -15,18 +15,17 @@ The HTML pages can also be opened directly. Local-file links carry the chosen th
 - `team.html`: the 11-person roster and faculty mentor.
 - `reading.html`: selected literature with search, topic filters, and annotations.
 - `contact.html`: official email and copy-email control.
-- `styles.css`: shared responsive layout, both color palettes, and subtle transitions.
-- `theme.js`: theme selection before the first render; Light, Dark, or System, with a saved preference.
-- `site.js`: shared menus, clipboard feedback, page reveals, and compatibility for old homepage anchors.
+- `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
+- `site.js`: mobile navigation, clipboard feedback, page reveals, and compatibility for old homepage anchors.
 - `reading.js`: reading-page search, filtering, and rendering.
 - `research-data.js`: paper metadata, short annotations, and original roster records. The displayed roster is static HTML in `team.html`.
-- `assets/`: original concept image and CYBORG mark. See `assets/image-provenance.md` for the existing artwork's generation details.
+- `assets/`: team portraits, the University of Maryland footer logo, the original concept image, and the CYBORG mark. See `assets/image-provenance.md` for the concept artwork's generation details.
 
 Edit page content directly in its HTML file. The navigation and footer are repeated in the five files so every page has functional links without JavaScript. Apply changes to those shared elements consistently across the pages.
 
 ## Appearance and accessibility
 
-Light mode is the default. The header's appearance menu offers Light, Dark, and System. The saved preference survives navigation and reloads; System follows the device's color scheme. Theme controls support keyboard navigation and Escape. Mobile navigation, reading-result announcements, and clipboard feedback are accessible to assistive technology.
+The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits identify the people on the roster, and the footer includes the University of Maryland logo.
 
 Motion is limited to brief hover transitions and small reveals on entering the viewport. Reduced-motion preferences disable these effects. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
 
@@ -36,7 +35,7 @@ The study is in development. The site does not claim completed experiments, a va
 
 ## Validation
 
-Run `npm run check` for JavaScript syntax checks. The redesign was also checked in a browser for all five pages at 320px, 768px, and 1280px, with additional visual review at 390px. Theme persistence, keyboard menus, search and combined filters, empty results, annotations, and email copying were exercised.
+Run `npm run check` for JavaScript syntax checks. For browser validation, review all five pages at mobile, tablet, and desktop widths. Check mobile navigation and Escape, legacy homepage anchors, search and combined filters, empty results, annotations, email copying, team portraits, and footer logos.
 
 ## Hosting
 
