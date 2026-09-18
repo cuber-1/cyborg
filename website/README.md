@@ -17,6 +17,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 - `contact.html`: official email and copy-email control.
 - `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
 - `site.js`: mobile navigation, clipboard feedback, page reveals, and compatibility for old homepage anchors.
+- `home-intro.js`: types the homepage headline while the surrounding content fades in, preserving the heading's layout and accessible text.
 - `reading.js`: reading-page search, filtering, and rendering.
 - `feature-scroll.js`: expands the black research panel to the viewport edges on scroll; text keeps its reading width.
 - `brain-arm.js` / `brain-arm.css`: homepage-only SVG scroll animation; native scrolling controls signal paths, elbow movement, and feedback.
@@ -29,7 +30,7 @@ Edit page content directly in its HTML file. The navigation and footer are repea
 
 The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits identify the people on the roster, and the footer includes the University of Maryland logo.
 
-Motion includes brief hover transitions, small reveals, an expanding black research panel, and a homepage illustration driven by scroll position. The brain/arm section uses native scrolling and schedules frames only when the page scrolls or resizes. Reduced-motion preferences show a complete static illustration without the extended sticky section and disable other motion. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
+Motion includes a single typing pass for the homepage headline with a concurrent page fade, brief hover transitions, small reveals, an expanding black research panel, and a homepage illustration driven by scroll position. The typing effect reserves the complete headline's space and exposes its full text to assistive technology. The brain/arm section uses native scrolling and schedules frames only when the page scrolls or resizes. Reduced-motion preferences show the complete headline and a static illustration without the extended sticky section and disable other motion. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
 
 ## Research framing
 
