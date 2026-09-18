@@ -12,7 +12,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 
 - `index.html`: project introduction with a brain/arm illustration beside the headline, an expanding research panel, and links into the site.
 - `research.html`: research question, planned measures, and candidate study design.
-- `team.html`: the 10-person roster and faculty mentor.
+- `team.html`: the 10-person portrait gallery and faculty mentor, without personal name labels.
 - `reading.html`: selected literature with search, topic filters, and annotations.
 - `contact.html`: official email and copy-email control.
 - `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
@@ -21,14 +21,14 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 - `reading.js`: reading-page search, filtering, and rendering.
 - `feature-scroll.js`: expands the black research panel from 72% viewport width (80% on mobile) to the screen edges; the contents scale gently without reflowing.
 - `brain-arm.js` / `brain-arm.css`: homepage-only SVG scroll animation; native scrolling controls signal paths, elbow movement, and feedback.
-- `research-data.js`: paper metadata, short annotations, and team roster records. The displayed roster is static HTML in `team.html`.
+- `research-data.js`: paper metadata and short annotations. The team gallery is static HTML in `team.html`.
 - `assets/`: team portraits, University of Maryland and Gemstone logos, and the CYBORG mark. See `assets/image-provenance.md` for image sources.
 
 Edit page content directly in its HTML file. The navigation and footer are repeated in the five files so every page has functional links without JavaScript. Apply changes to those shared elements consistently across the pages.
 
 ## Appearance and accessibility
 
-The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits identify the people on the roster, and the footer includes the University of Maryland logo.
+The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits use generic descriptions without personal names, and the footer includes the University of Maryland logo.
 
 Motion includes a single typing pass for the homepage headline with a concurrent page fade, brief hover transitions, small reveals, an expanding black research panel, and a hero illustration driven by scroll position. The typing effect reserves the complete headline's space and exposes its full text to assistive technology. The brain/arm illustration uses native scrolling and schedules frames only when the page scrolls or resizes. Reduced-motion preferences show the complete headline and a static illustration and disable other motion. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
 
