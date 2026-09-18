@@ -3,8 +3,9 @@
 
   const section = document.querySelector('[data-brain-arm]');
   if (!section) return;
-  const panel = section.querySelector('.sync-sticky');
-  if (!panel) return;
+  const visual = section.querySelector('.sync-visual');
+  if (!visual) return;
+  const header = document.querySelector('.site-header');
 
   const forearm = section.querySelector('[data-forearm]');
   const brainNodes = [...section.querySelectorAll('[data-brain-node]')];
@@ -59,12 +60,13 @@
 
   function measureProgress() {
     const bounds = section.getBoundingClientRect();
-    const panelHeight = panel.getBoundingClientRect().height;
-    const parsedTop = Number.parseFloat(window.getComputedStyle(panel).top);
-    const stickyTop = Number.isFinite(parsedTop) ? parsedTop : 0;
-    const distance = bounds.height - panelHeight;
-    if (distance <= 0) return bounds.top <= stickyTop ? 1 : 0;
-    return clamp((stickyTop - bounds.top) / distance);
+    const visualBounds = visual.getBoundingClientRect();
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    // Finish before the diagram disappears behind the header.
+    const visibleTail = Math.min(80, visualBounds.height * 0.25);
+    const visualTravel = visualBounds.bottom - bounds.top - visibleTail;
+    const distance = Math.max(1, Math.min(bounds.height * 0.65, visualTravel));
+    return clamp((headerHeight - bounds.top) / distance);
   }
 
   function schedule() {
@@ -76,9 +78,7 @@
   }
 
   function syncMode() {
-    const enhanced = !printing && !motionPreference.matches;
-    section.classList.toggle('sync-enhanced', enhanced);
-    if (enhanced) {
+    if (!printing && !motionPreference.matches) {
       schedule();
     } else {
       if (frame) window.cancelAnimationFrame(frame);
@@ -102,7 +102,8 @@
   if ('ResizeObserver' in window) {
     const observer = new ResizeObserver(schedule);
     observer.observe(section);
-    observer.observe(panel);
+    observer.observe(visual);
+    if (header) observer.observe(header);
   }
   syncMode();
 })();
