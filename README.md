@@ -16,7 +16,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 - `reading.html`: selected literature with search, topic filters, and annotations.
 - `contact.html`: official email and copy-email control.
 - `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
-- `site.js`: mobile navigation, clipboard feedback, page reveals, and compatibility for old homepage anchors.
+- `site.js`: mobile navigation, clipboard feedback, page reveals, refresh-to-top behavior, and compatibility for old homepage anchors.
 - `home-intro.js`: types the homepage headline while the surrounding content fades in, preserving the heading's layout and accessible text.
 - `reading.js`: reading-page search, filtering, and rendering.
 - `feature-scroll.js`: expands the black research panel from 72% viewport width (80% on mobile) to the screen edges; the contents scale gently without reflowing.

@@ -1,6 +1,26 @@
 (() => {
   'use strict';
 
+  const navigation = window.performance.getEntriesByType('navigation')[0];
+  if (navigation && navigation.type === 'reload') {
+    const restoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = 'manual';
+    if (window.location.hash) {
+      const url = new URL(window.location.href);
+      url.hash = '';
+      window.history.replaceState(window.history.state, '', url.href);
+    }
+    const startAtTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    startAtTop();
+    window.addEventListener('pageshow', () => {
+      startAtTop();
+      window.setTimeout(() => {
+        startAtTop();
+        window.history.scrollRestoration = restoration;
+      }, 0);
+    }, { once: true });
+  }
+
   function routeLegacyAnchor() {
     if (!/(?:\/index\.html|\/)$/i.test(window.location.pathname)) return false;
     const routes = {
