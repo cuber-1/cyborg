@@ -12,7 +12,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 
 - `index.html`: project introduction with a brain/arm illustration beside the headline, an expanding research panel, and links into the site.
 - `research.html`: research question, planned measures, and candidate study design.
-- `team.html`: the 10-person portrait gallery and faculty mentor, without personal name labels.
+- `team.html`: the 10-person portrait gallery and faculty mentor, with names beneath the portraits.
 - `reading.html`: selected literature with search, topic filters, and annotations.
 - `contact.html`: official email and copy-email control.
 - `styles.css`: shared responsive layout, fixed light palette, and subtle transitions.
@@ -28,7 +28,7 @@ Edit page content directly in its HTML file. The navigation and footer are repea
 
 ## Appearance and accessibility
 
-The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits use generic descriptions without personal names, and the footer includes the University of Maryland logo.
+The site uses a fixed light appearance across all pages. Mobile navigation supports Escape and focus restoration; navigation controls, reading-result announcements, and clipboard feedback are accessible to assistive technology. Team portraits identify the people in the gallery, and the footer includes the University of Maryland logo.
 
 Motion includes a single typing pass for the homepage headline with a concurrent page fade, brief hover transitions, small reveals, an expanding black research panel, and a hero illustration driven by scroll position. The typing effect reserves the complete headline's space and exposes its full text to assistive technology. The brain/arm illustration uses native scrolling and schedules frames only when the page scrolls or resizes. Reduced-motion preferences show the complete headline and a static illustration and disable other motion. Content stays visible if JavaScript is unavailable, except the dynamically rendered reading list, which includes a fallback source link.
 
