@@ -8,7 +8,6 @@
 
   const forearm = section.querySelector('[data-forearm]');
   const brainNodes = [...section.querySelectorAll('[data-brain-node]')];
-  const stages = [...section.querySelectorAll('[data-sync-stage]')];
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const clamp = value => Math.max(0, Math.min(1, value));
   const ease = value => value * value * (3 - 2 * value);
@@ -44,9 +43,7 @@
   }
 
   function render(progress, completed = false) {
-    const stage = progress < 0.32 ? 0 : progress < 0.66 ? 1 : 2;
     section.style.setProperty('--sync-progress', String(progress));
-    section.dataset.phase = completed ? 'complete' : String(stage);
     if (forearm) {
       const angle = -12 + 52 * ease(clamp((progress - 0.22) / 0.55));
       forearm.setAttribute('transform', `translate(790 340) rotate(${angle})`);
@@ -57,10 +54,6 @@
       const phase = index / Math.max(1, brainNodes.length - 1) * 0.55;
       const activation = completed ? 1 : ease(clamp((progress - phase) / 0.35));
       node.setAttribute('opacity', String(0.25 + 0.75 * activation));
-    });
-    stages.forEach(element => {
-      const active = completed || Number(element.dataset.syncStage) === stage;
-      element.classList.toggle('is-active', active);
     });
   }
 
