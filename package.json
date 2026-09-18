@@ -5,6 +5,6 @@
   "description": "Team CYBORG \u2014 University of Maryland Gemstone, Class of 2029",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node --check site.js && node --check brain-arm.js && node --check reading.js && node --check research-data.js && node --check server.mjs"
+    "check": "node --check site.js && node --check brain-arm.js && node --check feature-scroll.js && node --check reading.js && node --check research-data.js && node --check server.mjs"
   }
 }
