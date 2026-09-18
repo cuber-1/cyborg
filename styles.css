@@ -48,7 +48,7 @@ h3 { font-size: 25px; letter-spacing: -.025em; }
 .site-header { position: sticky; z-index: 30; top: 0; background: var(--header); backdrop-filter: blur(12px); }
 .header-inner { width: min(1360px, 89.5%); height: 88px; display: flex; align-items: center; gap: 28px; margin-inline: auto; }
 .brand { display: inline-flex; align-items: center; gap: 9px; font-size: 24px; font-weight: 700; line-height: 1; letter-spacing: -.055em; }
-.brand svg { width: 29px; height: 29px; color: var(--accent); }
+.brand-mark { width: 38px; height: 38px; flex: 0 0 auto; }
 .desktop-nav { display: flex; align-items: center; gap: 29px; margin-left: auto; }
 .desktop-nav a { font-size: 15px; padding-block: 10px; position: relative; }
 .desktop-nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 6px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .18s ease; }
@@ -200,7 +200,7 @@ td { font-family: var(--serif); font-size: 25px; color: var(--accent); }
 .site-footer { border-top: 1px solid var(--line); padding-top: 35px; padding-bottom: 24px; }
 .footer-top { display: grid; grid-template-columns: 1fr 1.8fr 1fr; gap: 30px; align-items: start; }
 .footer-top .brand { font-size: 21px; }
-.footer-top .brand svg { width: 25px; height: 25px; }
+.footer-top .brand-mark { width: 34px; height: 34px; }
 .footer-affiliation { display: flex; align-items: center; font-size: 13px; gap: 18px; }
 .umd-seal { display: block; flex: 0 0 80px; }
 .umd-seal img { width: 80px; height: 80px; object-fit: contain; }
@@ -297,7 +297,7 @@ td { font-family: var(--serif); font-size: 25px; color: var(--accent); }
   .wrap, .header-inner { width: 89%; }
   .header-inner { height: 70px; gap: 14px; }
   .brand { font-size: 21px; gap: 7px; }
-  .brand svg { width: 25px; height: 25px; }
+  .brand-mark { width: 34px; height: 34px; }
   .header-actions { gap: 19px; }
   .header-contact { display: none; }
   .mobile-nav { top: 70px; }

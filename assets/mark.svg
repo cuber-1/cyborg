@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path fill="#a44831" d="m20 1 17 10v18L20 39 3 29V11zm0 7L9 14v12l11 6 11-6v-6H20v6l-5-3v-6l5-3 11 6v-6z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+          <!-- Main Outer Hexagon Path forming a clean 'C' -->
+          <path d="M 72,23
+                   L 50,10
+                   L 15,30
+                   L 15,70
+                   L 50,90
+                   L 72,77"
+                fill="none"
+                stroke="#0D1117"
+                stroke-width="3.6"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+
+          <!-- Inner Alignment Accent Line -->
+          <path d="M 64,36 L 50,28 L 28,41 L 28,59 L 50,72 L 64,64"
+                fill="none"
+                stroke="#0D1117"
+                stroke-width="1.62"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                opacity="0.35" />
+
+          <circle cx="50" cy="50" r="2.8800000000000003" fill="#0D1117" />
+        </svg>

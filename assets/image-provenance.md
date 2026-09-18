@@ -1,5 +1,11 @@
 # Website image provenance
 
+## CYBORG logo
+
+- Asset: `mark.svg`.
+- User-supplied `cyborg-minimal-hexagon-v1.svg`, with the original geometry and colors preserved.
+- Used in every page's header and footer and as the browser icon.
+
 ## Team portraits
 
 User-supplied portraits added September 18, 2026, in the requested order: Jakeem Morris, Vishal Shankar, Dvij Raicha. Web copies are in `team/` as named JPEGs, limited to a 1000-pixel longest edge and encoded at 85% quality. Original attachments remain unchanged; CSS controls the displayed framing.
