@@ -1,0 +1,98 @@
+.sync-section { margin-top: 88px; --sync-progress: 1; }
+.sync-sticky { position: relative; display: flex; flex-direction: column; padding: 35px 42px 28px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.sync-section.sync-enhanced { height: 200vh; height: 200svh; min-height: 1100px; }
+.sync-enhanced .sync-sticky { position: sticky; top: 104px; height: min(690px, calc(100vh - 122px)); height: min(690px, calc(100svh - 122px)); min-height: 510px; }
+.sync-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; position: relative; z-index: 1; }
+.sync-heading .eyebrow { color: var(--muted); margin-bottom: 13px; font-size: 10px; }
+.sync-heading h2 { font: 400 clamp(36px, 3.8vw, 54px)/1.02 var(--serif); letter-spacing: -.045em; }
+.sync-intro { font-size: 15px; line-height: 1.5; color: var(--muted); padding-bottom: 4px; }
+.sync-visual { min-height: 0; flex: 1; display: flex; justify-content: center; align-items: center; }
+.sync-scene { width: 100%; height: 100%; max-height: 410px; overflow: visible; color: var(--text); }
+.sync-section:not(.sync-enhanced) .sync-scene { height: auto; }
+.sync-orbit { fill: none; stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 10; opacity: .24; }
+.brain-halo { transform-origin: 223px 224px; transform: scale(calc(.86 + var(--sync-progress) * .2)); }
+.signal-track { fill: none; stroke: #b9aa9b; stroke-width: 2; stroke-dasharray: 3 9; }
+.signal-track-return { stroke: #a2ac99; }
+.signal-path, .feedback-path { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; }
+.signal-path { stroke: var(--accent); }
+.feedback-path { stroke: #647659; }
+.brain-outline, .brain-stem { fill: #ead0be; stroke: #955a42; stroke-width: 2.6; stroke-linejoin: round; }
+.brain-stem { fill: #dfb9a2; }
+.brain-folds { fill: none; stroke: #a56b52; stroke-width: 2.4; stroke-linecap: round; }
+.brain-network path { fill: none; stroke: #a44831; stroke-width: 1.2; opacity: .38; }
+.brain-network circle { fill: #a44831; stroke: #f5f2eb; stroke-width: 2; }
+.arm-drawing { stroke-linejoin: round; stroke-linecap: round; }
+.arm-skin { fill: #e8d9c6; stroke: #5e6054; stroke-width: 2.8; }
+.arm-muscle { fill: none; stroke: #a99d8a; stroke-width: 2; }
+.arm-brace { fill: #a5b299; stroke: #4e5e49; stroke-width: 2.5; }
+.brace-detail { fill: none; stroke: #4e5e49; stroke-width: 1.3; }
+.arm-cuff { fill: #687961; stroke: #455640; stroke-width: 2; }
+.shoulder-joint, .elbow-joint, .wrist-joint { fill: #eeeae0; stroke: #4e5e49; stroke-width: 2.5; }
+.joint-ring { fill: #ccd2bf; stroke: #77856c; stroke-width: 1.4; }
+.joint-core { fill: #4e5e49; }
+.joint-ticks { fill: none; stroke: #4e5e49; stroke-width: 2; }
+.signal-dot { fill: var(--accent); }
+.feedback-dot { fill: #647659; }
+.dot-aura { opacity: .13; }
+.scene-labels { fill: var(--muted); font: 12px var(--sans); letter-spacing: 2px; }
+.scene-labels text:last-child { text-anchor: middle; }
+.sync-bottom { position: relative; z-index: 1; padding-top: 12px; }
+.sync-stages { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin: 0; padding: 0; }
+.sync-stages li { border-top: 1px solid var(--line); padding-top: 12px; color: var(--muted); font-size: 15px; transition: color .22s ease, border-color .22s ease; }
+.sync-stages li > span { font-size: 10px; margin-right: 12px; }
+.sync-stages .is-active { border-color: var(--accent); color: var(--accent); }
+.sync-footnote { display: flex; justify-content: space-between; gap: 20px; margin-top: 19px; color: var(--muted); font-size: 10px; }
+.sync-scroll-cue { visibility: hidden; }
+.sync-enhanced .sync-scroll-cue { visibility: visible; }
+.sync-scroll-cue > span { display: inline-block; margin-left: 8px; }
+.sync-progress { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--line); }
+.sync-progress > span { display: block; height: 100%; background: var(--accent); transform: scaleX(var(--sync-progress)); transform-origin: left; }
+@media (max-width: 800px) {
+  .sync-section { margin-top: 60px; }
+  .sync-sticky { padding: 28px; }
+  .sync-enhanced .sync-sticky { top: 88px; height: min(690px, calc(100svh - 108px)); }
+  .sync-heading h2 { font-size: 40px; }
+  .sync-intro { font-size: 13px; }
+  .sync-stages { gap: 16px; }
+}
+@media (max-width: 520px) {
+  .sync-section { margin-top: 48px; }
+  .sync-section.sync-enhanced { height: 180svh; min-height: 1000px; }
+  .sync-sticky { padding: 25px 21px 23px; border-radius: 9px; }
+  .sync-enhanced .sync-sticky { top: 86px; height: min(550px, calc(100svh - 106px)); min-height: 490px; }
+  .sync-heading { display: block; }
+  .sync-heading .eyebrow { font-size: 9px; margin-bottom: 16px; }
+  .sync-heading h2 { font-size: 38px; }
+  .sync-intro { font-size: 13px; margin-top: 17px; }
+  .sync-intro br { display: none; }
+  .sync-visual { margin-inline: -20px; }
+  .sync-scene { min-height: 200px; }
+  .scene-labels { font-size: 18px; letter-spacing: 1px; }
+  .sync-stages { gap: 12px; }
+  .sync-stages li { font-size: 12px; padding-top: 10px; }
+  .sync-stages li > span { display: block; margin-bottom: 4px; font-size: 9px; }
+  .sync-footnote { font-size: 9px; gap: 10px; margin-top: 17px; }
+}
+@media (max-height: 640px) and (min-width: 521px) {
+  .sync-enhanced .sync-sticky { top: 96px; height: calc(100svh - 108px); min-height: 0; padding: 20px 30px; }
+  .sync-heading h2 { font-size: 30px; }
+  .sync-heading h2 br { display: none; }
+  .sync-heading .eyebrow { margin-bottom: 8px; }
+  .sync-stages li { padding-top: 7px; font-size: 12px; }
+  .sync-footnote { margin-top: 10px; }
+}
+@media (max-height: 640px) and (max-width: 520px) {
+  .sync-enhanced .sync-sticky { min-height: 0; padding: 20px; }
+  .sync-heading h2 { font-size: 30px; }
+  .sync-heading .eyebrow { margin-bottom: 10px; }
+  .sync-intro { margin-top: 12px; font-size: 12px; }
+  .sync-scene { min-height: 140px; }
+  .sync-footnote { margin-top: 10px; }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .sync-section.sync-enhanced { height: auto; min-height: 0; }
+  .sync-enhanced .sync-sticky { position: relative; top: auto; height: auto; min-height: 0; }
+  .sync-scene { height: auto; }
+  .sync-scroll-cue { visibility: hidden !important; }
+  .sync-stages li { transition: none; }
+}
