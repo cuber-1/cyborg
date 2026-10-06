@@ -31,6 +31,10 @@ User-supplied photograph of Dr. Rodolphe Gentili added September 18, 2026. `team
 
 Dvij Raicha's portrait was replaced later on September 18, 2026 with the brighter user-supplied screenshot. The replacement uses the same JPEG web encoding and size limit, with no color adjustments.
 
+## Team librarian portrait
+
+User-supplied photograph of Amber Pierdinock-Weed added October 5, 2026 as `team/amber-pierdinock-weed.png`. The original 400 × 400 image is copied unchanged; CSS controls its framing in the team librarian card.
+
 ## Gemstone Honors Program logo
 
 - Asset: `gemstone-logo.png`.
