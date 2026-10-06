@@ -12,6 +12,10 @@ User-supplied portraits added September 18, 2026, in the requested order: Jakeem
 
 Healy Levy-Yurista's user-supplied headshot was added October 5, 2026 as `team/healy-levy-yurista.png`. The original image is copied unchanged; CSS controls its framing to match the team gallery.
 
+## Team group photo
+
+User-supplied `DS2_7656.jpg` added October 5, 2026 above the individual profiles on the team page. Responsive web copies are `team/cyborg-team.jpg` (2400 pixels wide) and `team/cyborg-team-1200.jpg` (1200 pixels wide), encoded at 85% JPEG quality. Both preserve the complete composition and original colors; the source file remains unchanged.
+
 ## University of Maryland seal
 
 - Asset: `umd-informal-seal.png`.
