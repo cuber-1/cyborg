@@ -18,6 +18,8 @@ Grant Middleton's user-supplied portrait was added October 5, 2026 as `team/gran
 
 Aryan Sharma's user-supplied portrait was added October 5, 2026 as `team/aryan-sharma.jpg`, limited to a 1000-pixel longest edge and encoded at 85% JPEG quality. The source image remains unchanged; CSS controls its framing to match the team gallery.
 
+Daniel Nikitin's user-supplied portrait was added October 6, 2026 as `team/daniel-nikitin.jpg`, limited to a 1000-pixel longest edge and encoded at 85% JPEG quality. The source image remains unchanged; CSS controls its framing to match the team gallery.
+
 ## Team group photo
 
 User-supplied `DS2_7656.jpg` added October 5, 2026 above the individual profiles on the team page. Responsive web copies are `team/cyborg-team.jpg` (2400 pixels wide) and `team/cyborg-team-1200.jpg` (1200 pixels wide), encoded at 85% JPEG quality. Both preserve the complete composition and original colors; the source file remains unchanged.
