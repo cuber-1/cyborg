@@ -10,6 +10,8 @@
 
 User-supplied portraits added September 18, 2026, in the requested order: Jakeem Morris, Vishal Shankar, Dvij Raicha. Web copies are in `team/` as named JPEGs, limited to a 1000-pixel longest edge and encoded at 85% quality. Original attachments remain unchanged; CSS controls the displayed framing.
 
+Healy Levy-Yurista's user-supplied headshot was added October 5, 2026 as `team/healy-levy-yurista.png`. The original image is copied unchanged; CSS controls its framing to match the team gallery.
+
 ## University of Maryland seal
 
 - Asset: `umd-informal-seal.png`.
