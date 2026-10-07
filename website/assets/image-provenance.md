@@ -22,6 +22,8 @@ Daniel Nikitin's user-supplied portrait was added October 6, 2026 as `team/danie
 
 Joanna Wei's user-supplied portrait was added October 6, 2026 as `team/joanna-wei.jpg`. The 1170 x 1477 image is used unchanged; CSS controls its framing to match the team gallery.
 
+Eli Kurtz's user-supplied headshot was added October 6, 2026 as `team/eli-kurtz.jpg`. A website-ready copy was prepared at 800 x 1000 pixels and encoded at 85% JPEG quality; CSS controls its framing to match the team gallery.
+
 ## Team group photo
 
 User-supplied `DS2_7656.jpg` added October 5, 2026 above the individual profiles on the team page. Responsive web copies are `team/cyborg-team.jpg` (2400 pixels wide) and `team/cyborg-team-1200.jpg` (1200 pixels wide), encoded at 85% JPEG quality. Both preserve the complete composition and original colors; the source file remains unchanged.
