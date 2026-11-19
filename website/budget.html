@@ -24,30 +24,26 @@
   </header>
   <main id="main" class="page-budget">
     <section class="page-intro budget-intro wrap">
-      <p class="eyebrow">Project budget</p>
-      <h1>Project<br>budget.</h1>
-      <p class="lead">Current hardware and component estimates.</p>
-      <span class="status-pill"><span aria-hidden="true"></span>Working estimate · November 2026</span>
+      <p class="eyebrow">Project finances</p>
+      <h1>Hardware budget.</h1>
+      <p class="lead">Current component estimates for the CYBORG research system.</p>
     </section>
     <section class="budget-overview wrap reveal" aria-labelledby="budget-overview-title">
       <h2 id="budget-overview-title" class="sr-only">Budget overview</h2>
-      <div class="budget-total-card"><p class="eyebrow">Priced subtotal</p><p class="budget-total" data-budget-total>$2,257.55</p><p class="budget-total-note">Before quantities, shipping, and tax.</p></div>
-      <div class="budget-stat"><p class="budget-stat-value" data-budget-items>73</p><p>line items</p></div>
-      <div class="budget-stat"><p class="budget-stat-value" data-budget-categories>15</p><p>system categories</p></div>
-      <div class="budget-stat"><p class="budget-stat-value" data-budget-quotes>3</p><p>prices to confirm</p></div>
-    </section>
-    <section class="budget-breakdown wrap reveal" aria-labelledby="category-title">
-      <div class="budget-section-heading"><div><p class="eyebrow">By category</p><h2 id="category-title">Cost breakdown.</h2></div></div>
-      <div class="category-breakdown" data-category-breakdown></div>
+      <div class="budget-total-card"><p>Priced subtotal</p><p class="budget-total" data-budget-total>$2,257.55</p></div>
+      <div class="budget-stat"><p>Line items</p><p class="budget-stat-value" data-budget-items>73</p></div>
+      <div class="budget-stat"><p>Categories</p><p class="budget-stat-value" data-budget-categories>15</p></div>
+      <div class="budget-stat"><p>Quotes needed</p><p class="budget-stat-value" data-budget-quotes>3</p></div>
     </section>
     <section class="budget-ledger wrap reveal" aria-labelledby="ledger-title">
-      <div class="budget-section-heading"><div><p class="eyebrow">Itemized estimate</p><h2 id="ledger-title">Components.</h2></div></div>
+      <h2 id="ledger-title" class="sr-only">Itemized budget</h2>
+      <div class="sheet-titlebar"><div><span class="sheet-dot"></span><p><strong>CYBORG</strong> / Hardware budget</p></div><span>Updated November 2026</span></div>
       <div class="budget-tools">
         <label class="budget-search"><span class="sr-only">Search components</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" data-budget-search placeholder="Search components" autocomplete="off"></label>
         <label class="budget-select"><span class="sr-only">Filter by category</span><select data-budget-filter><option value="">All categories</option></select></label>
       </div>
-      <p class="budget-results" data-budget-results aria-live="polite">73 items</p>
-      <div class="budget-table-wrap"><table class="budget-table"><thead><tr><th scope="col">Component</th><th scope="col">Category</th><th scope="col">Listed cost</th><th scope="col"><span class="sr-only">Purchase link</span></th></tr></thead><tbody data-budget-body></tbody></table></div>
+      <p class="budget-results" data-budget-results aria-live="polite">73 rows</p>
+      <div class="budget-table-wrap"><table class="budget-table"><thead><tr><th scope="col" class="row-number">#</th><th scope="col">Component</th><th scope="col">Category</th><th scope="col">Notes</th><th scope="col">Unit cost</th><th scope="col">Source</th></tr></thead><tbody data-budget-body></tbody></table></div>
       <noscript><p class="budget-noscript">Enable JavaScript to browse the itemized estimate.</p></noscript>
       <p class="budget-disclaimer">Planning estimate. Three items need quotes; the $0 frame adapter price needs confirmation.</p>
     </section>
