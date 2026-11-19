@@ -1,6 +1,6 @@
 # Team CYBORG website
 
-A five-page static website for Team CYBORG, University of Maryland Gemstone Honors Program, Class of 2029.
+A six-page static website for Team CYBORG, University of Maryland Gemstone Honors Program, Class of 2029.
 
 ## Preview
 
@@ -12,6 +12,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 
 - `index.html`: project introduction with a brain/arm illustration beside the headline, an expanding research panel, and links into the site.
 - `research.html`: research question, planned measures, and candidate study design.
+- `budget.html`: working hardware estimate with category totals, search, filtering, and purchase-source links.
 - `team.html`: the 10-person portrait gallery and faculty mentor, with names beneath the portraits.
 - `reading.html`: selected literature with search, topic filters, and annotations.
 - `contact.html`: official email and copy-email control.
@@ -24,7 +25,7 @@ The HTML pages can also be opened directly. A local HTTP server provides the mos
 - `research-data.js`: paper metadata and short annotations. The team gallery is static HTML in `team.html`.
 - `assets/`: team portraits, University of Maryland and Gemstone logos, and the CYBORG mark. See `assets/image-provenance.md` for image sources.
 
-Edit page content directly in its HTML file. The navigation and footer are repeated in the five files so every page has functional links without JavaScript. Apply changes to those shared elements consistently across the pages.
+Edit page content directly in its HTML file. The navigation and footer are repeated across the pages so every page has functional links without JavaScript. Apply changes to those shared elements consistently.
 
 ## Appearance and accessibility
 
@@ -38,7 +39,7 @@ The study is in development. The site does not claim completed experiments, a va
 
 ## Validation
 
-Run `npm run check` for JavaScript syntax checks. For browser validation, review all five pages at mobile, tablet, and desktop widths. Check mobile navigation and Escape, legacy homepage anchors, search and combined filters, empty results, annotations, email copying, team portraits, and footer logos.
+Run `npm run check` for JavaScript syntax checks. For browser validation, review all six pages at mobile, tablet, and desktop widths. Check mobile navigation and Escape, legacy homepage anchors, search and combined filters, empty results, annotations, email copying, team portraits, and footer logos.
 
 ## Hosting
 

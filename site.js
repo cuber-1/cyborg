@@ -26,6 +26,7 @@
     const routes = {
       '#research': 'research.html',
       '#approach': 'research.html#method',
+      '#budget': 'budget.html',
       '#team': 'team.html',
       '#reading': 'reading.html',
       '#contact': 'contact.html'
