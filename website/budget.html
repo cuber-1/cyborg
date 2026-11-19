@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="Explore Team CYBORG's working hardware budget, from actuation and sensors to safety controls and wearable interfaces.">
+  <title>Budget · CYBORG</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg?v=5d71a4cebb">
+  <link rel="stylesheet" href="styles.css?v=7c22d5c97a">
+  <script src="budget-data.js?v=1" defer></script>
+  <script src="budget.js?v=1" defer></script>
+  <script src="site.js?v=057d4de44c" defer></script>
+</head>
+<body data-page="budget">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="CYBORG home"><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="38" height="38" aria-hidden="true"><path d="M72 23 50 10 15 30v40l35 20 22-13" fill="none" stroke="#0D1117" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="m64 36-14-8-22 13v18l22 13 14-8" fill="none" stroke="#0D1117" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round" opacity=".35"/><circle cx="50" cy="50" r="2.88" fill="#0D1117"/></svg><span>CYBORG</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="research.html">Research</a><a href="budget.html" aria-current="page">Budget</a><a href="team.html">Team</a><a href="reading.html">Reading</a></nav>
+      <div class="header-actions"><a class="header-contact" href="contact.html">Get in touch <span aria-hidden="true">↗</span></a><button class="menu-toggle" data-menu-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button></div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="research.html">Research</a><a href="budget.html" aria-current="page">Budget</a><a href="team.html">Team</a><a href="reading.html">Reading</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main id="main" class="page-budget">
+    <section class="page-intro budget-intro wrap">
+      <p class="eyebrow">Project budget</p>
+      <h1>Project<br>budget.</h1>
+      <p class="lead">Current hardware and component estimates.</p>
+      <span class="status-pill"><span aria-hidden="true"></span>Working estimate · November 2026</span>
+    </section>
+    <section class="budget-overview wrap reveal" aria-labelledby="budget-overview-title">
+      <h2 id="budget-overview-title" class="sr-only">Budget overview</h2>
+      <div class="budget-total-card"><p class="eyebrow">Priced subtotal</p><p class="budget-total" data-budget-total>$2,257.55</p><p class="budget-total-note">Before quantities, shipping, and tax.</p></div>
+      <div class="budget-stat"><p class="budget-stat-value" data-budget-items>73</p><p>line items</p></div>
+      <div class="budget-stat"><p class="budget-stat-value" data-budget-categories>15</p><p>system categories</p></div>
+      <div class="budget-stat"><p class="budget-stat-value" data-budget-quotes>3</p><p>prices to confirm</p></div>
+    </section>
+    <section class="budget-breakdown wrap reveal" aria-labelledby="category-title">
+      <div class="budget-section-heading"><div><p class="eyebrow">By category</p><h2 id="category-title">Cost breakdown.</h2></div></div>
+      <div class="category-breakdown" data-category-breakdown></div>
+    </section>
+    <section class="budget-ledger wrap reveal" aria-labelledby="ledger-title">
+      <div class="budget-section-heading"><div><p class="eyebrow">Itemized estimate</p><h2 id="ledger-title">Components.</h2></div></div>
+      <div class="budget-tools">
+        <label class="budget-search"><span class="sr-only">Search components</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" data-budget-search placeholder="Search components" autocomplete="off"></label>
+        <label class="budget-select"><span class="sr-only">Filter by category</span><select data-budget-filter><option value="">All categories</option></select></label>
+      </div>
+      <p class="budget-results" data-budget-results aria-live="polite">73 items</p>
+      <div class="budget-table-wrap"><table class="budget-table"><thead><tr><th scope="col">Component</th><th scope="col">Category</th><th scope="col">Listed cost</th><th scope="col"><span class="sr-only">Purchase link</span></th></tr></thead><tbody data-budget-body></tbody></table></div>
+      <noscript><p class="budget-noscript">Enable JavaScript to browse the itemized estimate.</p></noscript>
+      <p class="budget-disclaimer">Planning estimate. Three items need quotes; the $0 frame adapter price needs confirmation.</p>
+    </section>
+    <div class="next-page wrap reveal"><span>See what the system will study</span><a href="research.html">Our research <span aria-hidden="true">↗</span></a></div>
+  </main>
+  <footer class="site-footer wrap">
+    <div class="footer-top">
+      <a class="brand" href="index.html" aria-label="CYBORG home"><svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="38" height="38" aria-hidden="true"><path d="M72 23 50 10 15 30v40l35 20 22-13" fill="none" stroke="#0D1117" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="m64 36-14-8-22 13v18l22 13 14-8" fill="none" stroke="#0D1117" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round" opacity=".35"/><circle cx="50" cy="50" r="2.88" fill="#0D1117"/></svg><span>CYBORG</span></a>
+      <div class="footer-affiliation"><a class="umd-seal" href="https://umd.edu/" target="_blank" rel="noopener noreferrer" aria-label="University of Maryland"><img src="assets/umd-informal-seal.png" alt="University of Maryland seal" width="80" height="80" loading="lazy"></a><div class="affiliation-copy"><a class="gemstone-logo" href="https://gemstone.umd.edu/" target="_blank" rel="noopener noreferrer" aria-label="Gemstone Honors Program"><img src="assets/gemstone-logo.png" alt="Gemstone Honors Program" width="880" height="199" loading="lazy"></a><span>University of Maryland · Class of 2029</span></div></div>
+      <a class="footer-email" href="mailto:draicha@umd.edu">draicha@umd.edu ↗</a>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> Team CYBORG</span><a href="contact.html">Contact</a></div>
+  </footer>
+</body>
+</html>
