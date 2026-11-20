@@ -9,7 +9,7 @@
   const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
   const categories = [...new Set(items.map(item => item.category))];
   const priced = items.filter(item => typeof item.cost === 'number');
-  const total = priced.reduce((sum, item) => sum + item.cost, 0);
+  const total = priced.reduce((sum, item) => sum + item.cost * (item.quantity || 1), 0);
   document.querySelector('[data-budget-total]').textContent = money.format(total);
   document.querySelector('[data-budget-items]').textContent = items.length;
   document.querySelector('[data-budget-categories]').textContent = categories.length;
@@ -21,7 +21,8 @@
     body.replaceChildren(...visible.map((item, index) => {
       const row = document.createElement('tr');
       const pending = typeof item.cost !== 'number';
-      row.innerHTML = `<td class="row-number">${index + 1}</td><td class="budget-name">${item.name}</td><td>${item.category}</td><td class="budget-notes">${item.notes || '—'}</td><td class="budget-cost${pending ? ' budget-cost-pending' : ''}">${pending ? 'Quote needed' : money.format(item.cost)}</td><td><a class="budget-buy-link" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="View source for ${item.name}">Open ↗</a></td>`;
+      const quantity = item.quantity || 1;
+      row.innerHTML = `<td class="row-number">${index + 1}</td><td class="budget-name">${item.name}</td><td>${item.category}</td><td class="budget-quantity${quantity > 1 ? ' budget-quantity-multiple' : ''}">${quantity}</td><td class="budget-notes">${item.notes || '—'}</td><td class="budget-cost${pending ? ' budget-cost-pending' : ''}">${pending ? 'Quote needed' : money.format(item.cost)}</td><td class="budget-line-total${pending ? ' budget-cost-pending' : ''}">${pending ? 'Pending' : money.format(item.cost * quantity)}</td><td><a class="budget-buy-link" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="View source for ${item.name}">Open ↗</a></td>`;
       return row;
     }));
     results.textContent = `${visible.length} ${visible.length === 1 ? 'row' : 'rows'}`;
