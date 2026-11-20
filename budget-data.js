@@ -21,6 +21,7 @@ window.BUDGET_ITEMS = [
     "name": "Lee Spring LE 115J 06 M Extension Spring",
     "url": "https://www.leespring.com/extension-specific-new/264761",
     "cost": 71.28,
+    "quantity": 2,
     "category": "Actuation & springs",
   },
   {
@@ -45,18 +46,21 @@ window.BUDGET_ITEMS = [
     "name": "goBILDA 12 mm Pillow Block",
     "url": "https://www.servocity.com/1602-series-1-side-2-post-pillow-block-12mm-bore/",
     "cost": 35.96,
+    "quantity": 2,
     "category": "Frame & motion hardware",
   },
   {
     "name": "goBILDA 100 mm REX Shaft",
     "url": "https://www.servocity.com/2102-series-stainless-steel-rex-shaft-12mm-diameter-100mm-length/",
     "cost": 9.98,
+    "quantity": 2,
     "category": "Frame & motion hardware",
   },
   {
     "name": "goBILDA 12 mm REX Hyper Hub",
     "url": "https://www.servocity.com/1310-series-hyper-hub-12mm-rex-bore/",
     "cost": 31.96,
+    "quantity": 2,
     "category": "Frame & motion hardware",
   },
   {
@@ -69,12 +73,14 @@ window.BUDGET_ITEMS = [
     "name": "goBILDA Gusseted Angle Mount",
     "url": "https://www.servocity.com/1204-series-gusseted-angle-mount-1-1-2-pack/",
     "cost": 19.96,
+    "quantity": 3,
     "category": "Frame & motion hardware",
   },
   {
     "name": "Ronstan RF30101 Pulley Block",
     "url": "https://defender.com/en_us/ronstan-series-30-ball-bearing-loop-top-single-block-rf30101",
     "cost": 129.54,
+    "quantity": 2,
     "category": "Pulley & rope system",
   },
   {
@@ -111,6 +117,7 @@ window.BUDGET_ITEMS = [
     "name": "K&J D42DIA Diametric Magnet",
     "url": "https://www.kjmagnetics.com/d42dia-neodymium-diametric-disc-magnet",
     "cost": 0.92,
+    "quantity": 3,
     "category": "Electronics & sensors",
   },
   {
@@ -165,6 +172,7 @@ window.BUDGET_ITEMS = [
     "name": "Pololu 1528 Limit Switch",
     "url": "https://www.pololu.com/product/1528",
     "cost": 5.56,
+    "quantity": 2,
     "category": "Safety & controls",
   },
   {
@@ -189,6 +197,7 @@ window.BUDGET_ITEMS = [
     "name": "Closed Quick Links",
     "url": "https://www.homedepot.com/p/Everbilt-3-16-in-Zinc-Quick-Link-42714/205887919",
     "cost": 3.96,
+    "quantity": 4,
     "category": "Mechanical connectors",
     "notes": "each; 3/16 zinc link"
   },
@@ -196,6 +205,7 @@ window.BUDGET_ITEMS = [
     "name": "Rope Thimbles",
     "url": "https://www.ronstan.com/us/sailmaker-stainless-steel-thimble-1-8in.html",
     "cost": 10.87,
+    "quantity": 2,
     "category": "Mechanical connectors",
     "notes": "each; 1/8-in stainless thimble"
   },
@@ -203,6 +213,7 @@ window.BUDGET_ITEMS = [
     "name": "Pulley Shackles",
     "url": "https://www.ronstan.com/us/shackled-slotted-pin-3-16-l-18mmw-10mm.html",
     "cost": 10.87,
+    "quantity": 2,
     "category": "Mechanical connectors",
     "notes": "each; RF150; availability requires inquiry"
   },
@@ -277,6 +288,7 @@ window.BUDGET_ITEMS = [
     "name": "Padded Straps",
     "url": "https://www.performancehealth.com/padded-strap-adhesiv2-x14-pk10",
     "cost": 28.18,
+    "quantity": 2,
     "category": "Wearable interfaces",
     "notes": "pack of 10"
   },
@@ -303,6 +315,7 @@ window.BUDGET_ITEMS = [
     "name": "2 A Fuse Candidate",
     "url": "https://www.digikey.com/en/products/detail/littelfuse-inc/0287002-PXCN/3102552",
     "cost": 0.46,
+    "quantity": 2,
     "category": "Wiring & electrical protection",
     "notes": "each, bulk"
   },
@@ -317,6 +330,7 @@ window.BUDGET_ITEMS = [
     "name": "WAGO Terminals",
     "url": "https://www.digikey.com/en/products/detail/wago-corporation/221-415/13549457",
     "cost": 1.17,
+    "quantity": 4,
     "category": "Wiring & electrical protection",
     "notes": "each"
   },
@@ -331,6 +345,7 @@ window.BUDGET_ITEMS = [
     "name": "Transient Suppressor",
     "url": "https://www.digikey.com/en/products/detail/littelfuse-inc/P6KE15CA/285928",
     "cost": 0.64,
+    "quantity": 2,
     "category": "Wiring & electrical protection",
     "notes": "each, cut tape"
   },
